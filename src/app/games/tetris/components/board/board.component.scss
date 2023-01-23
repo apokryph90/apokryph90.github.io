@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.game-board {
+  background: #303030;
+  border-bottom: 6px inset rgba(255, 255, 255, 0.5);
+  border-left: 6px inset rgba(255, 255, 255, 0.5);
+  border-right: 6px inset rgba(0, 0, 0, 0.5);
+  border-top: 6px inset rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.right-column {
+  color: lightgray;
+  margin-left: 20px;
+}
+
+.play-button {
+  font-family: "Press Start 2P", cursive;
+  background: green;
+  border-bottom: 6px inset rgba(0, 0, 0, 0.5);
+  border-left: 6px inset rgba(0, 0, 0, 0.5);
+  border-right: 6px inset rgba(255, 255, 255, 0.5);
+  border-top: 6px inset rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  color: white;
+  padding: 15px 30px;
+  cursor: pointer;
+
+  &:hover {
+    background: forestgreen;
+    border-bottom: 6px inset rgba(255, 255, 255, 0.5);
+    border-left: 6px inset rgba(255, 255, 255, 0.5);
+    border-right: 6px inset rgba(0, 0, 0, 0.5);
+    border-top: 6px inset rgba(0, 0, 0, 0.5);
+  }
+}

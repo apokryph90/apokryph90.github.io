@@ -1,0 +1,59 @@
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tile {
+  width: 32%;
+  padding-bottom: 8%;
+  padding-top: 8%;
+  margin-bottom: 2%;
+
+  background: #7c7c7c;
+  border-bottom: 6px inset rgba(0, 0, 0, 0.5);
+  border-left: 6px inset rgba(0, 0, 0, 0.5);
+  border-right: 6px inset rgba(255, 255, 255, 0.5);
+  border-top: 6px inset rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  min-width: 200px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &.disabled {
+    background: #9e9e9e;
+    color: #bcbcbc;
+    cursor: default;
+  }
+
+  &:focus:not(.disabled),
+  &:hover:not(.disabled) {
+    background: #bcbcbc;
+  }
+
+  .animation--fading {
+    animation-name: fading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes fading {
+    0% {
+      opacity: 0.2;
+      font-size: 1.5rem;
+    }
+    50% {
+      opacity: 1;
+      font-size: 2rem;
+    }
+    100% {
+      opacity: 0.2;
+      font-size: 1.5rem;
+    }
+  }
+}

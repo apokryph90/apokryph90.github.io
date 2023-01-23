@@ -4,14 +4,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
-const materialModules = [MatToolbarModule, MatIconModule, MatButtonModule];
+const materialModules = [
+  MatToolbarModule,
+  MatIconModule,
+  MatButtonModule,
+  MatGridListModule,
+];
 const components = [HeaderComponent];
 
 @NgModule({
   declarations: [...components, DashboardComponent],
   exports: [...materialModules, ...components],
-  imports: [CommonModule, ...materialModules],
+  imports: [...materialModules, CommonModule],
 })
 export class SharedModule {}

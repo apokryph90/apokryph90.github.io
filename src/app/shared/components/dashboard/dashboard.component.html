@@ -1,0 +1,15 @@
+<div class="container tile-container">
+  <div
+    class="tile"
+    *ngFor="let game of games"
+    [ngClass]="{ disabled: game.isDisabled }"
+    (click)="router.navigate([game.route])"
+  >
+    <div
+      class="tile_title"
+      [ngClass]="{ 'animation--fading': game.isAnimated }"
+    >
+      {{ game.title }}
+    </div>
+  </div>
+</div>
